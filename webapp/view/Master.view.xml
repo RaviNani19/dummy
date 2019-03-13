@@ -1,0 +1,16 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="DummyFbdummy.controller.Master"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout">
+	<SplitApp>
+		<masterPages>
+			<Page title="{i18n>master}" navButtonPress="toInitial" showNavButton="true">
+				<content>
+					<List items="{localModel1>/results}" id="list">
+						<items>
+							<ObjectListItem press="onPressObject" id="objList" title="{localModel1>ProductName}" number="{localModel1>SupplierID}" type="Active"/>
+						</items>
+					</List>
+				</content>
+			</Page>
+		</masterPages>
+	</SplitApp>
+</mvc:View>

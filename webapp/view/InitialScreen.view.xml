@@ -1,0 +1,21 @@
+<mvc:View controllerName="DummyFbdummy.controller.InitialScreen" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>intSceen}">
+				<content>
+					<Input showValueHelp="true" valueHelpRequest="onCategoryClick" id="categoryInput" width="250px" class="sapUiMediumMarginBegin"/>
+					<Button text="Add Categories" press="onAddCategory" class="sapUiMediumMarginBegin"/>
+				</content>
+				<footer>
+					<OverflowToolbar>
+						<ToolbarSpacer/>
+						<Button text="{i18n>text}" press="onNext"/>
+						<Button text="Update" press="onUpdCat"/>
+						<Button text="Delete" press="onUpdCat"/>
+					</OverflowToolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

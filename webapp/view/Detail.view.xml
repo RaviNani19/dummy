@@ -1,0 +1,41 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="DummyFbdummy.controller.Detail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout">
+	<App>
+		<pages>
+			<Page title="{i18n>detail}">
+				<content>
+					<IconTabBar id="idIconTabBar" select="handleIconTabBarSelect" class="sapUiResponsiveContentPadding">
+						<items>
+							<IconTabFilter text="{i18n>product}" id="list">
+								<List headerText="Product Information">
+									<StandardListItem title="Product Name" info="{localModel3>/ProductName}"/>
+									<StandardListItem title="Product ID" info="{localModel3>/ProductID}"/>
+									<StandardListItem title="CategoryID " info="{localModel3>/CategoryID}"/>
+									<StandardListItem title="QuantityPerUnit" info="{localModel3>/QuantityPerUnit}"/>
+									<StandardListItem title="UnitPrice" info="{localModel3>/UnitPrice}"/>
+									<StandardListItem title="SupplierID" info="{localModel3>/SupplierID}"/>
+								</List>
+							</IconTabFilter>
+							<IconTabFilter text="{i18n>supplier}">
+								<List headerText="Seller Information">
+									<StandardListItem title="Supplier ID" info="{localModel2>/SupplierID}"/>
+									<StandardListItem title="Company Name " info="{localModel2>/CompanyName}"/>
+									<StandardListItem title="Contact Name" info="{localModel2>/ContactName}"/>
+									<StandardListItem title="Contact Title " info="{localModel2>/ContactTitle}"/>
+									<StandardListItem title="Address" info="{localModel2>/Address}"/>
+								</List>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+				<footer>
+					<OverflowToolbar>
+						<ToolbarSpacer/>
+						<Button text="Add Products" press="onProducts"/>
+						<Button text="Add Suppliers" press="onProducts"/>
+					</OverflowToolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
